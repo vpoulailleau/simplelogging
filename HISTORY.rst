@@ -6,3 +6,8 @@ History
 ------------------
 
 * First release on PyPI.
+
+0.4.0 (2018-12-02)
+------------------
+
+* Fix bump config
