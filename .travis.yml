@@ -2,10 +2,10 @@
 
 language: python
 python:
+  - 3.7
   - 3.6
   - 3.5
   - 3.4
-  - 2.7
 
 # Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
 install: pip install -U tox-travis
@@ -22,8 +22,8 @@ deploy:
   distributions: sdist bdist_wheel
   user: vpoulailleau
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: "FPSGKT8yZ/1vGbluKIVygo8B1Jnl8ubkog1PhH7R/EtaUFNNsXIyFfUOEWmxZXL3URNn7/aMuG/j2tev4LSLGI78XKzWJoz+VSqOY895Z/srgwQpibPFzOFbDJ2X5G5s0kkphMgmfdesKFVXSrqUk8xoqvrBUYeuYVw1tz798DimtPb1UPLqAunKT0tp71VHLa1xG7L5VlTw5Fn0Gm3LG2h+2OfV3MueAP6lP5pRwj5nC/o/iwmHRhMlR7Z1kly8IvaQc4AeKkygcfuYKrTmDjTjzgnGTClbKACL/dMeVcPpAHFal4gKGqifdC4qDlkwdUGsdG3zov7COXVJ3Yoa/5UTigUce9jgH+7MNt7TskE5BD4Ut2Un0iIwA/6p00pUHu1XUX/5hl1jswRPEu9lbdlvYppXnx9X1ZId9q4VB/TSW7ax7xDOotZMTNVW1BRjEV4arpvD4DPbADYphh9C2VXHPX+gdg2B+5cGAFcLy1iUAWlC2zU2+6tWvJMFMg9pcQtnZXi6Eacn9oqeEA1EC2BhnheghmEupJ7xYW2wqq8BvDBRUFCcqXSMOC2bHM+PCqHtstnf7RR4CasJIEx7o6++Q7srnTLiLh0cZ2VJtbTdHssQgwx+dsjpZkVxrCdWC4e7K6kVi8TB4Dvn/FHCwUhWaHeS0MTuxEGIzTqgYxM="
   on:
     tags: true
     repo: vpoulailleau/simplelogging
-    python: 3.6
+    python: 3.7
