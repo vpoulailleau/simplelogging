@@ -1,20 +1,10 @@
 # Easy Logging
 
-.. image:: https://img.shields.io/pypi/v/easylogging.svg
-        :target: https://pypi.python.org/pypi/easylogging
-
-.. image:: https://img.shields.io/travis/vpoulailleau/easylogging.svg
-        :target: https://travis-ci.org/vpoulailleau/easylogging
-
-.. image:: https://readthedocs.org/projects/easylogging/badge/?version=latest
-        :target: https://easylogging.readthedocs.io/en/latest/?badge=latest
-        :alt: Documentation Status
-
-
-
+[![PyPI](https://img.shields.io/pypi/v/easylogging.svg)](https://pypi.python.org/pypi/easylogging)
+[![Travis](https://img.shields.io/travis/vpoulailleau/easylogging.svg)](https://travis-ci.org/vpoulailleau/easylogging)
+[![ReadTheDocs](https://readthedocs.org/projects/easylogging/badge/?version=latest)](https://easylogging.readthedocs.io/en/latest/?badge=latest)
 
 Logging made easy, no excuse for any print call.
-
 
 * Free software: BSD license
 * Documentation: https://easylogging.readthedocs.io.
@@ -37,10 +27,10 @@ log = easylogging.get_logger()
 
 
 def log_some_messages():
-log.debug("## some debug ##")
-log.info("## some info ##")
-log.warning("## some warning ##")
-log.error("## some error ##")
+    log.debug("## some debug ##")
+    log.info("## some info ##")
+    log.warning("## some warning ##")
+    log.error("## some error ##")
 ```
 
 ### main.py
