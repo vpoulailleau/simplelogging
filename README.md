@@ -1,19 +1,19 @@
-# Easy Logging
+# Simple Logging
 
-[![PyPI](https://img.shields.io/pypi/v/easylogging.svg)](https://pypi.python.org/pypi/easylogging)
-[![Travis](https://img.shields.io/travis/vpoulailleau/easylogging.svg)](https://travis-ci.org/vpoulailleau/easylogging)
-[![ReadTheDocs](https://readthedocs.org/projects/easylogging/badge/?version=latest)](https://easylogging.readthedocs.io/en/latest/?badge=latest)
+[![PyPI](https://img.shields.io/pypi/v/simplelogging.svg)](https://pypi.python.org/pypi/simplelogging)
+[![Travis](https://img.shields.io/travis/vpoulailleau/simplelogging.svg)](https://travis-ci.org/vpoulailleau/simplelogging)
+[![ReadTheDocs](https://readthedocs.org/projects/simplelogging/badge/?version=latest)](https://simplelogging.readthedocs.io/en/latest/?badge=latest)
 
-Logging made easy, no excuse for any print call.
+Logging made simple, no excuse for any print call.
 
 * Free software: BSD license
-* Documentation: https://easylogging.readthedocs.io.
+* Documentation: https://simplelogging.readthedocs.io.
 
 
 ## Features
 
 
-* Easy logging setup
+* Simple logging setup
 * Based on Python logging module
 
 ## Example
@@ -21,9 +21,9 @@ Logging made easy, no excuse for any print call.
 ### example_module.py
 
 ```python
-import easylogging
+import simplelogging
 
-log = easylogging.get_logger()
+log = simplelogging.get_logger()
 
 
 def log_some_messages():
@@ -36,12 +36,12 @@ def log_some_messages():
 ### main.py
 
 ```python
-import easylogging
+import simplelogging
 import example_module
 
-# log = easylogging.get_logger(console_level=easylogging.DEBUG)
-# log = easylogging.get_logger(file_name="log.txt")
-log = easylogging.get_logger()
+# log = simplelogging.get_logger(console_level=simplelogging.DEBUG)
+# log = simplelogging.get_logger(file_name="log.txt")
+log = simplelogging.get_logger()
 
 a_variable = "a nice variable"
 another_variable = 42
@@ -56,14 +56,14 @@ log.error("---- example_module writes to the log ----")
 example_module.log_some_messages()
 
 log.error("---- reduced logging (bye debug and info messages) ----")
-easylogging.reduced_logging(log)
+simplelogging.reduced_logging(log)
 log.debug("a debug message")
 log.info("an info")
 log.warning("a warning")
 log.error("an error")
 
 log.error("---- full logging (welcome back debug and info messages) ----")
-easylogging.full_logging(log)
+simplelogging.full_logging(log)
 log.debug("a debug message")
 log.info("an info")
 log.warning("a warning")

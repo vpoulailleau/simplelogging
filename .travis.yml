@@ -25,5 +25,5 @@ deploy:
     secure: PLEASE_REPLACE_ME
   on:
     tags: true
-    repo: vpoulailleau/easylogging
+    repo: vpoulailleau/simplelogging
     python: 3.6

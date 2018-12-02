@@ -2,6 +2,6 @@
 Usage
 =====
 
-To use Easy Logging in a project::
+To use Simple Logging in a project::
 
-    import easylogging
+    import simplelogging

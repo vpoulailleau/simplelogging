@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-"""Tests for `easylogging` package."""
+"""Tests for `simplelogging` package."""
 
 import pytest
 
 
-from easylogging import easylogging
+from simplelogging import simplelogging
 
 
 @pytest.fixture

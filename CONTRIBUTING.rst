@@ -15,7 +15,7 @@ Types of Contributions
 Report Bugs
 ~~~~~~~~~~~
 
-Report bugs at https://github.com/vpoulailleau/easylogging/issues.
+Report bugs at https://github.com/vpoulailleau/simplelogging/issues.
 
 If you are reporting a bug, please include:
 
@@ -38,14 +38,14 @@ and "help wanted" is open to whoever wants to implement it.
 Write Documentation
 ~~~~~~~~~~~~~~~~~~~
 
-Easy Logging could always use more documentation, whether as part of the
-official Easy Logging docs, in docstrings, or even on the web in blog posts,
+Simple Logging could always use more documentation, whether as part of the
+official Simple Logging docs, in docstrings, or even on the web in blog posts,
 articles, and such.
 
 Submit Feedback
 ~~~~~~~~~~~~~~~
 
-The best way to send feedback is to file an issue at https://github.com/vpoulailleau/easylogging/issues.
+The best way to send feedback is to file an issue at https://github.com/vpoulailleau/simplelogging/issues.
 
 If you are proposing a feature:
 
@@ -57,17 +57,17 @@ If you are proposing a feature:
 Get Started!
 ------------
 
-Ready to contribute? Here's how to set up `easylogging` for local development.
+Ready to contribute? Here's how to set up `simplelogging` for local development.
 
-1. Fork the `easylogging` repo on GitHub.
+1. Fork the `simplelogging` repo on GitHub.
 2. Clone your fork locally::
 
-    $ git clone git@github.com:your_name_here/easylogging.git
+    $ git clone git@github.com:your_name_here/simplelogging.git
 
 3. Install your local copy into a virtualenv. Assuming you have virtualenvwrapper installed, this is how you set up your fork for local development::
 
-    $ mkvirtualenv easylogging
-    $ cd easylogging/
+    $ mkvirtualenv simplelogging
+    $ cd simplelogging/
     $ python setup.py develop
 
 4. Create a branch for local development::
@@ -79,7 +79,7 @@ Ready to contribute? Here's how to set up `easylogging` for local development.
 5. When you're done making changes, check that your changes pass flake8 and the
    tests, including testing other Python versions with tox::
 
-    $ flake8 easylogging tests
+    $ flake8 simplelogging tests
     $ python setup.py test or py.test
     $ tox
 
@@ -103,7 +103,7 @@ Before you submit a pull request, check that it meets these guidelines:
    your new functionality into a function with a docstring, and add the
    feature to the list in README.rst.
 3. The pull request should work for Python 2.7, 3.4, 3.5 and 3.6, and for PyPy. Check
-   https://travis-ci.org/vpoulailleau/easylogging/pull_requests
+   https://travis-ci.org/vpoulailleau/simplelogging/pull_requests
    and make sure that the tests pass for all supported Python versions.
 
 Tips
@@ -111,7 +111,7 @@ Tips
 
 To run a subset of tests::
 
-$ py.test tests.test_easylogging
+$ py.test tests.test_simplelogging
 
 
 Deploying

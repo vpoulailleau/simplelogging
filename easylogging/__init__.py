@@ -1,4 +1,4 @@
-"""Top-level package for Easy Logging."""
+"""Top-level package for Simple Logging."""
 
 __author__ = """Vincent Poulailleau"""
 __email__ = "vpoulailleau@gmail.com"

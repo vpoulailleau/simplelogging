@@ -1,4 +1,4 @@
-Welcome to Easy Logging's documentation!
+Welcome to Simple Logging's documentation!
 ======================================
 
 .. toctree::

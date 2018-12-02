@@ -1,4 +1,4 @@
-* Easy Logging version:
+* Simple Logging version:
 * Python version:
 * Operating System:
 
