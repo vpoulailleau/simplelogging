@@ -2,7 +2,7 @@
 
 __author__ = """Vincent Poulailleau"""
 __email__ = "vpoulailleau@gmail.com"
-__version__ = "0.1.0"
+__version__ = "__version__ = '0.2.0'"
 
 import inspect
 import logging
