@@ -6,7 +6,7 @@
 
 Logging made simple, no excuse for any print call.
 
-* Free software: BSD license
+* Free software: BSD 3-Clause license
 * Documentation: https://simplelogging.readthedocs.io.
 
 
