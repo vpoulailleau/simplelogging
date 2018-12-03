@@ -1,10 +1,6 @@
 # Config file for automatic testing at travis-ci.org
 
 language: python
-python:
-  - 3.6
-  - 3.5
-  - 3.4
 matrix:
   include:
     - python: 3.4
