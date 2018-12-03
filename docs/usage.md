@@ -118,6 +118,36 @@ See above the explanations for console level, they are applicable for file level
 
 ### Configuring logger level
 
+The logger level applies to both console and file output. Since the logger is a standard `logging.Logger`, you can use the `setLevel` method.
+
+During the initial configuration, you can provide the logger level.
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    logger_level=simplelogging.DEBUG)
+```
+
 ### Configuring an existing logger
 
 ## Default configuration
+
+`simplelogging.get_logger()` is an easy way to configure a logging infrastructure. It accepts several parameters:
+
+* name: name of the logger (default: None)
+* logger_level: logging level (default: DEBUG)
+* console: activation of console output (default: True)
+* console_format: message format on console (default: DEFAULT_FORMAT)
+* console_level: logging level of the console (default: INFO)
+* file_name: name of the file in which the log will be written (default: None, i.e. no file)
+* file_format: message format in the file (default: DEFAULT_FORMAT)
+* file_level: logging level in the file (default: DEBUG)
+
+`DEFAULT_FORMAT` is:
+```python
+DEFAULT_FORMAT = (
+    "%(asctime)s [%(levelname)-7s] "
+    "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
+    " %(message)s"
+)
+```
