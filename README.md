@@ -90,6 +90,8 @@ log.error("an error")
 2018-12-02 18:44:34,902 [ERROR  ]       main_simple.py( 32):<module>             :: an error
 ```
 
+More examples are provided in the documentation: https://simplelogging.readthedocs.io.
+
 ## Credits
 
 This package is an extension of the logging package in the Python standard library.
