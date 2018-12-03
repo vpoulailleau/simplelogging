@@ -134,14 +134,14 @@ log = simplelogging.get_logger(
 
 `simplelogging.get_logger()` is an easy way to configure a logging infrastructure. It accepts several parameters:
 
-* name: name of the logger (default: None)
-* logger_level: logging level (default: DEBUG)
-* console: activation of console output (default: True)
-* console_format: message format on console (default: DEFAULT_FORMAT)
-* console_level: logging level of the console (default: INFO)
-* file_name: name of the file in which the log will be written (default: None, i.e. no file)
-* file_format: message format in the file (default: DEFAULT_FORMAT)
-* file_level: logging level in the file (default: DEBUG)
+* name: name of the logger (default: `None`)
+* logger_level: logging level (default: `DEBUG`)
+* console: activation of console output (default: `True`)
+* console_format: message format on console (default: `DEFAULT_FORMAT`)
+* console_level: logging level of the console (default: `INFO`)
+* file_name: name of the file in which the log will be written (default: `None`, i.e. no file)
+* file_format: message format in the file (default: `DEFAULT_FORMAT`)
+* file_level: logging level in the file (default: `DEBUG`)
 
 `DEFAULT_FORMAT` is:
 ```python
