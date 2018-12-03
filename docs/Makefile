@@ -1,6 +1,13 @@
 # Minimal makefile for Sphinx documentation
 #
 
+get_file_from_root:
+	cp ../README.md readme.md
+	cp ../HISTORY.md history.md
+
+html: get_file_from_root
+
+
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = python -msphinx
