@@ -6,7 +6,7 @@ __version__ = "0.5.0"
 
 import inspect
 import logging
-from logging import DEBUG, ERROR, INFO, WARNING
+from logging import CRITICAL, DEBUG, ERROR, INFO, WARNING
 from logging.handlers import RotatingFileHandler
 
 DEFAULT_FORMAT = (
