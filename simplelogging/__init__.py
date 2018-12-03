@@ -18,13 +18,13 @@ DEFAULT_FORMAT = (
 
 def get_logger(
     name=None,
-    logger_level=logging.DEBUG,
+    logger_level=DEBUG,
     console=True,
     console_format=DEFAULT_FORMAT,
-    console_level=logging.INFO,
+    console_level=INFO,
     file_name=None,
     file_format=DEFAULT_FORMAT,
-    file_level=logging.DEBUG,
+    file_level=DEBUG,
 ):
     if name:
         caller_name = name
@@ -51,13 +51,13 @@ def get_logger(
 
 def configure_main_logger(
     logger,
-    logger_level=logging.DEBUG,
+    logger_level=DEBUG,
     console=True,
     console_format=DEFAULT_FORMAT,
-    console_level=logging.INFO,
+    console_level=INFO,
     file_name=None,
     file_format=DEFAULT_FORMAT,
-    file_level=logging.DEBUG,
+    file_level=DEBUG,
 ):
     logger.setLevel(logger_level)
 
@@ -76,8 +76,8 @@ def configure_main_logger(
 
 
 def reduced_logging(logger):
-    logger.setLevel(logging.WARNING)
+    logger.setLevel(WARNING)
 
 
 def full_logging(logger):
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(DEBUG)
