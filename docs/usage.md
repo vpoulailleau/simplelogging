@@ -41,6 +41,8 @@ log = simplelogging.get_logger(console=False)
 
 ### Console output
 
+The console output is managed through a `logging.StreamHandler` configured by `simplelogging`.
+
 #### Disabling the console output
 
 As already said, you can avoid having a console output by doing this in your main script:
@@ -49,3 +51,73 @@ import simplelogging
 
 log = simplelogging.get_logger(console=False)
 ```
+
+#### Changing message format on console
+
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    console_format="%(asctime)s")
+```
+
+You can configure de message format according to https://docs.python.org/3/library/logging.html#logrecord-attributes.
+
+#### Changing message level on console
+
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    console_level=simplelogging.DEBUG)
+```
+
+The logger will display on the console only messages with the level set to provide value or above.
+
+For example, the above code allows debug, info, warning and error messages to be displayed in the console.
+
+`simplelogging.DEBUG` is `logging.DEBUG`, and same for `INFO`, `WARNING`, `ERROR`, `CRITICAL`. They are provided for convenience, avoiding to import `logging`.
+
+See https://docs.python.org/3/library/logging.html#logging-levels and https://docs.python.org/3/howto/logging.html#when-to-use-logging for more detail.
+
+### File output
+
+The file output is managed through a `logging.handlers.RotatingFileHandler` configured by `simplelogging`.
+
+#### Disabling and enabling the file output
+
+File output is disabled by default. But you can enable logging to a file by giving the file path in your main script:
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    file_name="log.txt")
+```
+
+#### Changing message format in the file
+
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    file_format="%(asctime)s")
+```
+
+You can configure de message format according to https://docs.python.org/3/library/logging.html#logrecord-attributes.
+
+#### Changing message level in the file
+
+```python
+import simplelogging
+
+log = simplelogging.get_logger(
+    file_level=simplelogging.DEBUG)
+```
+
+See above the explanations for console level, they are applicable for file level.
+
+### Configuring logger level
+
+### Configuring an existing logger
+
+## Default configuration
