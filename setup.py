@@ -8,8 +8,11 @@ from setuptools import find_packages, setup
 with open("README.md") as readme_file:
     readme = readme_file.read()
 
-with open("HISTORY.md") as history_file:
-    history = history_file.read()
+try:
+    with open("HISTORY.md") as history_file:
+        history = history_file.read()
+except FileNotFoundError:
+    history = ""  # TODO remove, bug with tox?
 
 requirements = []
 
