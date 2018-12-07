@@ -95,5 +95,9 @@ def reduced_logging(logger):
     logger.setLevel(WARNING)
 
 
+def normal_logging(logger):
+    logger.setLevel(INFO)
+
+
 def full_logging(logger):
     logger.setLevel(DEBUG)
