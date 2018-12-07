@@ -63,24 +63,25 @@ def configure_main_logger(
 ):
     logger.setLevel(logger_level)
 
-    console_formatter = colorlog.ColoredFormatter(
-        console_format,
-        datefmt=None,
-        reset=True,
-        log_colors={
-            "DEBUG": "blue",
-            "INFO": "green",
-            "WARNING": "yellow",
-            "ERROR": "red",
-            "CRITICAL": "red,bg_white",
-        },
-        secondary_log_colors={},
-        style="%",
-    )
-    console_handler = colorlog.StreamHandler()
-    console_handler.setFormatter(console_formatter)
-    console_handler.setLevel(console_level)
-    logger.addHandler(console_handler)
+    if console:
+        console_formatter = colorlog.ColoredFormatter(
+            console_format,
+            datefmt=None,
+            reset=True,
+            log_colors={
+                "DEBUG": "blue",
+                "INFO": "green",
+                "WARNING": "yellow",
+                "ERROR": "red",
+                "CRITICAL": "red,bg_white",
+            },
+            secondary_log_colors={},
+            style="%",
+        )
+        console_handler = colorlog.StreamHandler()
+        console_handler.setFormatter(console_formatter)
+        console_handler.setLevel(console_level)
+        logger.addHandler(console_handler)
 
     if file_name:
         file_formatter = logging.Formatter(file_format)
