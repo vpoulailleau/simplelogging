@@ -70,9 +70,9 @@ def configure_main_logger(
             reset=True,
             log_colors={
                 "DEBUG": "blue",
-                "INFO": "green",
-                "WARNING": "yellow",
-                "ERROR": "red",
+                "INFO": "black,bg_green",
+                "WARNING": "black,bg_yellow",
+                "ERROR": "white,bg_red",
                 "CRITICAL": "red,bg_white",
             },
             secondary_log_colors={},
