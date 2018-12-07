@@ -1,5 +1,10 @@
 ## History
 
+### 0.6.0 (2018-12-07)
+
+* Colored output on console
+* Improved documentation
+
 ### 0.5.0 (2018-12-02)
 
 * Fix README rendering in PyPI
