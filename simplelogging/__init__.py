@@ -9,10 +9,12 @@ import logging
 from logging import CRITICAL, DEBUG, ERROR, INFO, WARNING
 from logging.handlers import RotatingFileHandler
 
+import colorlog
+
 DEFAULT_FORMAT = (
-    "%(asctime)s [%(levelname)-7s] "
+    "%(log_color)s%(asctime)s [%(levelname)-7s] "
     "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
-    " %(message)s"
+    " %(message)s%(reset)s"
 )
 
 
@@ -35,7 +37,7 @@ def get_logger(
     if caller_name != "__main__":
         logger = logging.getLogger(caller_name)
     else:
-        logger = logging.getLogger()
+        logger = colorlog.getLogger()
         configure_main_logger(
             logger,
             logger_level,
@@ -61,8 +63,21 @@ def configure_main_logger(
 ):
     logger.setLevel(logger_level)
 
-    console_formatter = logging.Formatter(console_format)
-    console_handler = logging.StreamHandler()
+    console_formatter = colorlog.ColoredFormatter(
+        console_format,
+        datefmt=None,
+        reset=True,
+        log_colors={
+            "DEBUG": "blue",
+            "INFO": "green",
+            "WARNING": "yellow",
+            "ERROR": "red",
+            "CRITICAL": "red,bg_white",
+        },
+        secondary_log_colors={},
+        style="%",
+    )
+    console_handler = colorlog.StreamHandler()
     console_handler.setFormatter(console_formatter)
     console_handler.setLevel(console_level)
     logger.addHandler(console_handler)
