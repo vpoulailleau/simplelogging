@@ -18,7 +18,40 @@ Logging made simple, no excuse for any print call.
 
 ## Example
 
-### example_module.py
+### Basic usage
+
+```python
+import simplelogging
+
+# log = simplelogging.get_logger(console_level=simplelogging.DEBUG)
+# log = simplelogging.get_logger(file_name="log.txt")
+log = simplelogging.get_logger()
+
+a_string_variable = 'hello'
+an_integer_variable = 42
+a_floating_point_variable = 3.14
+
+log.debug("some debug")
+log.debug(
+    "some variables: %s, %d, %f",
+    a_string_variable,
+    an_integer_variable,
+    a_floating_point_variable,
+)
+log.info("some info")
+log.warning("some warning")
+log.error("some error")
+log.critical("some critical error")
+
+try:
+    x = 1 / 0
+except ZeroDivisionError as error:
+    log.exception(error)
+```
+
+### Usage with modules
+
+#### example_module.py
 
 ```python
 import simplelogging
@@ -33,7 +66,7 @@ def log_some_messages():
     log.error("## some error ##")
 ```
 
-### main.py
+#### main.py
 
 ```python
 import simplelogging
@@ -70,7 +103,7 @@ log.warning("a warning")
 log.error("an error")
 ```
 
-### Result in the console
+#### Result in the console
 
 ```
 2018-12-02 18:44:34,897 [ERROR  ]       main_simple.py( 11):<module>             :: ---- normal logging ----
@@ -94,6 +127,6 @@ More examples are provided in the documentation: https://simplelogging.readthedo
 
 ## Credits
 
-This package is an extension of the logging package in the Python standard library.
+This package is an extension of the [logging](https://docs.python.org/3/howto/logging-cookbook.html) package in the Python standard library. Coloring of the console relies on [colorlog](https://github.com/borntyping/python-colorlog).
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.

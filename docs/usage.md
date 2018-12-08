@@ -6,19 +6,30 @@ To use Simple Logging in a project
 ```python
 import simplelogging
 
+# log = simplelogging.get_logger(console_level=simplelogging.DEBUG)
+# log = simplelogging.get_logger(file_name="log.txt")
 log = simplelogging.get_logger()
 
-# start logging
-log.debug("## some debug ##")
-log.info("## some info ##")
-log.warning("## some warning ##")
-log.error("## some error ##")
-log.critical("## some critical error ##")
+a_string_variable = 'hello'
+an_integer_variable = 42
+a_floating_point_variable = 3.14
+
+log.debug("some debug")
+log.debug(
+    "some variables: %s, %d, %f",
+    a_string_variable,
+    an_integer_variable,
+    a_floating_point_variable,
+)
+log.info("some info")
+log.warning("some warning")
+log.error("some error")
+log.critical("some critical error")
 
 try:
     x = 1 / 0
 except ZeroDivisionError as error:
-    log.log_exception(error)
+    log.exception(error)
 ```
 
 Note: `log` variable is a logger from the Python standard library's `logging` module.
