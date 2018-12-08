@@ -1,5 +1,9 @@
 ## History
 
+### 0.7.0 (2018-12-08)
+
+* Fix logging to file
+
 ### 0.6.0 (2018-12-07)
 
 * Colored output on console
