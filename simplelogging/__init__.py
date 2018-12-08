@@ -11,10 +11,16 @@ from logging.handlers import RotatingFileHandler
 
 import colorlog
 
-DEFAULT_FORMAT = (
+DEFAULT_CONSOLE_FORMAT = (
     "%(log_color)s%(asctime)s [%(levelname)-7s] "
     "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
     " %(message)s%(reset)s"
+)
+
+DEFAULT_FILE_FORMAT = (
+    "%(asctime)s [%(levelname)-7s] "
+    "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
+    " %(message)s"
 )
 
 
@@ -22,10 +28,10 @@ def get_logger(
     name=None,
     logger_level=DEBUG,
     console=True,
-    console_format=DEFAULT_FORMAT,
+    console_format=DEFAULT_CONSOLE_FORMAT,
     console_level=INFO,
     file_name=None,
-    file_format=DEFAULT_FORMAT,
+    file_format=DEFAULT_FILE_FORMAT,
     file_level=DEBUG,
 ):
     if name:
@@ -55,10 +61,10 @@ def configure_main_logger(
     logger,
     logger_level=DEBUG,
     console=True,
-    console_format=DEFAULT_FORMAT,
+    console_format=DEFAULT_CONSOLE_FORMAT,
     console_level=INFO,
     file_name=None,
-    file_format=DEFAULT_FORMAT,
+    file_format=DEFAULT_FILE_FORMAT,
     file_level=DEBUG,
 ):
     logger.setLevel(logger_level)
