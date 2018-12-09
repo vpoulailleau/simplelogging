@@ -12,13 +12,53 @@ Logging made simple, no excuse for any print call.
 
 ## Features
 
-
 * Simple logging setup
-* Based on Python logging module
+* Based on Python `logging` module of the standard library
+* Based on [colorlog](https://github.com/borntyping/python-colorlog) for colored log on console
+
+For advanced users:
+
+ * The provided logger is one of those from `logging`, this means it can be configured so that log messages are sent by email, HTTP, as described in https://docs.python.org/3/library/logging.handlers.html.
+ * The StreamHandler and the Formatter are those provided by `colorlog`.
 
 ## Example
 
-### example_module.py
+### Basic usage
+
+```python
+import simplelogging
+
+# log = simplelogging.get_logger(console_level=simplelogging.DEBUG)
+# log = simplelogging.get_logger(file_name="log.txt")
+log = simplelogging.get_logger()
+
+a_string_variable = "hello"
+an_integer_variable = 42
+a_floating_point_variable = 3.14
+
+log.debug("some debug")
+log.info("some info")
+log.info(
+    "some variables: %s, %d, %f",
+    a_string_variable,
+    an_integer_variable,
+    a_floating_point_variable,
+)
+log.warning("some warning")
+log.error("some error")
+log.critical("some critical error")
+
+try:
+    x = 1 / 0
+except ZeroDivisionError as error:
+    log.exception(error)
+```
+
+![quickstart result](quickstart.png)
+
+### Usage with modules
+
+#### example_module.py
 
 ```python
 import simplelogging
@@ -33,7 +73,7 @@ def log_some_messages():
     log.error("## some error ##")
 ```
 
-### main.py
+#### main.py
 
 ```python
 import simplelogging
@@ -70,28 +110,15 @@ log.warning("a warning")
 log.error("an error")
 ```
 
-### Result in the console
+#### Result in the console
 
-```
-2018-12-02 18:44:34,897 [ERROR  ]       main_simple.py( 11):<module>             :: ---- normal logging ----
-2018-12-02 18:44:34,897 [INFO   ]       main_simple.py( 13):<module>             :: an info
-2018-12-02 18:44:34,898 [WARNING]       main_simple.py( 14):<module>             :: a warning
-2018-12-02 18:44:34,898 [ERROR  ]       main_simple.py( 15):<module>             :: a nice variable and 42
-2018-12-02 18:44:34,898 [ERROR  ]       main_simple.py( 17):<module>             :: ---- example_module writes to the log ----
-2018-12-02 18:44:34,899 [INFO   ]    example_module.py(  8):log_some_messages    :: ## some info ##
-2018-12-02 18:44:34,899 [WARNING]    example_module.py(  9):log_some_messages    :: ## some warning ##
-2018-12-02 18:44:34,899 [ERROR  ]    example_module.py( 10):log_some_messages    :: ## some error ##
-2018-12-02 18:44:34,900 [ERROR  ]       main_simple.py( 20):<module>             :: ---- reduced logging (bye debug and info messages) ----
-2018-12-02 18:44:34,900 [WARNING]       main_simple.py( 24):<module>             :: a warning
-2018-12-02 18:44:34,901 [ERROR  ]       main_simple.py( 25):<module>             :: an error
-2018-12-02 18:44:34,901 [ERROR  ]       main_simple.py( 27):<module>             :: ---- full logging (welcome back debug and info messages) ----
-2018-12-02 18:44:34,901 [INFO   ]       main_simple.py( 30):<module>             :: an info
-2018-12-02 18:44:34,902 [WARNING]       main_simple.py( 31):<module>             :: a warning
-2018-12-02 18:44:34,902 [ERROR  ]       main_simple.py( 32):<module>             :: an error
-```
+
+![quickstart with modules result](with_modules.png)
+
+More examples are provided in the documentation: https://simplelogging.readthedocs.io.
 
 ## Credits
 
-This package is an extension of the logging package in the Python standard library.
+This package is an extension of the [logging](https://docs.python.org/3/howto/logging-cookbook.html) package in the Python standard library. Coloring of the console relies on [colorlog](https://github.com/borntyping/python-colorlog).
 
 This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
