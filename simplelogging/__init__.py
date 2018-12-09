@@ -12,13 +12,13 @@ from logging.handlers import RotatingFileHandler
 import colorlog
 
 DEFAULT_CONSOLE_FORMAT = (
-    "%(log_color)s%(asctime)s [%(levelname)-7s] "
+    "%(log_color)s%(asctime)s [%(levelname)-8s] "
     "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
     " %(message)s%(reset)s"
 )
 
 DEFAULT_FILE_FORMAT = (
-    "%(asctime)s [%(levelname)-7s] "
+    "%(asctime)s [%(levelname)-8s] "
     "%(filename)20s(%(lineno)3s):%(funcName)-20s ::"
     " %(message)s"
 )
