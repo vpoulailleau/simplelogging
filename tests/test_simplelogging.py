@@ -5,24 +5,10 @@
 
 import logging
 
+import colorlog
 import pytest
+
 import simplelogging
-
-
-@pytest.fixture
-def response():
-    """Sample pytest fixture.
-
-    See more at: http://doc.pytest.org/en/latest/fixture.html
-    """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
-
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
 
 
 def test_constants():
@@ -32,3 +18,26 @@ def test_constants():
     assert simplelogging.WARNING == logging.WARNING
     assert simplelogging.ERROR == logging.ERROR
     assert simplelogging.CRITICAL == logging.CRITICAL
+
+
+def test_logger_is_from_logging():
+    """Test logger class"""
+    log = simplelogging.get_logger()
+    assert isinstance(log, logging.Logger)
+
+
+def test_default_logger_level():
+    """Test default logger level"""
+    main_log = simplelogging.get_logger("__main__")
+    assert main_log.getEffectiveLevel() == simplelogging.DEBUG
+
+
+def test_default_logger_console():
+    """Test default logger level stream handler presence"""
+    main_log = simplelogging.get_logger("__main__")
+    assert main_log.handlers
+    for handler in main_log.handlers:
+        if isinstance(handler, colorlog.StreamHandler):
+            break
+    else:
+        assert 0, "No console handler found"
