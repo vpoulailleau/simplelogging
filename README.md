@@ -12,6 +12,7 @@ Logging made simple, no excuse for any print call.
 
 ## Features
 
+* Logging management (debug, information or error messages)
 * Simple logging setup
 * Based on Python `logging` module of the standard library
 * Based on [colorlog](https://github.com/borntyping/python-colorlog) for colored log on console
