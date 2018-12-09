@@ -1,5 +1,10 @@
 ## History
 
+### 0.8.0 (2018-12-09)
+
+* Improve documentation
+* Change default format: enlarge level size for critical errors
+
 ### 0.7.0 (2018-12-08)
 
 * Fix logging to file
