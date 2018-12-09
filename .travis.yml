@@ -1,31 +1,23 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 matrix:
   include:
-    - python: 3.4
-    - python: 3.5
-    - python: 3.6
-    - python: 3.7
-      dist: xenial
-      sudo: true
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+  - python: 3.4
+  - python: 3.5
+  - python: 3.6
+  - python: 3.7
+    dist: xenial
+    sudo: true
+
 install: pip install -U tox-travis
 
-# Command to run tests, e.g. python setup.py test
 script: tox
 
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: vpoulailleau
   password:
-    secure: "FPSGKT8yZ/1vGbluKIVygo8B1Jnl8ubkog1PhH7R/EtaUFNNsXIyFfUOEWmxZXL3URNn7/aMuG/j2tev4LSLGI78XKzWJoz+VSqOY895Z/srgwQpibPFzOFbDJ2X5G5s0kkphMgmfdesKFVXSrqUk8xoqvrBUYeuYVw1tz798DimtPb1UPLqAunKT0tp71VHLa1xG7L5VlTw5Fn0Gm3LG2h+2OfV3MueAP6lP5pRwj5nC/o/iwmHRhMlR7Z1kly8IvaQc4AeKkygcfuYKrTmDjTjzgnGTClbKACL/dMeVcPpAHFal4gKGqifdC4qDlkwdUGsdG3zov7COXVJ3Yoa/5UTigUce9jgH+7MNt7TskE5BD4Ut2Un0iIwA/6p00pUHu1XUX/5hl1jswRPEu9lbdlvYppXnx9X1ZId9q4VB/TSW7ax7xDOotZMTNVW1BRjEV4arpvD4DPbADYphh9C2VXHPX+gdg2B+5cGAFcLy1iUAWlC2zU2+6tWvJMFMg9pcQtnZXi6Eacn9oqeEA1EC2BhnheghmEupJ7xYW2wqq8BvDBRUFCcqXSMOC2bHM+PCqHtstnf7RR4CasJIEx7o6++Q7srnTLiLh0cZ2VJtbTdHssQgwx+dsjpZkVxrCdWC4e7K6kVi8TB4Dvn/FHCwUhWaHeS0MTuxEGIzTqgYxM="
+    secure: aS76IJI+B83rvrxPQNH6T0EorNLStsXODVz94QJ1Xnq+KOd8XF3Dim9FpGjLaFt666mA1d7DR+jRWXeOrNrXELnqiidvmeiOY6oc+p1vrSZyJGEwbotw49kR6Dy9490i/BEFzTnu/APmRfp0uhMixCdVBCIKv24H8cZTKKWZLxnu5zMrZP+GjNC2cnZDYv+3YR8rZ+yIjpS0iUnxMvA1GRjMatmjhExkqvG6I3I7nD14mmtPBRWKxsf6zp13ah6/W9pdy4jxdKYL3GM1Yj33qlZSHjtAq6hlBwbYLLoP/E1obkyBqnVwpiIjUb4t4akg0wwe//7V+0socfo8vA1kYgQFgbBiIJdfYMJ8tgJISsalzJuW5zl9q9OThRktQD9iTquRdLYzaaGcxbKWguhgoLOe3lKKp9INbKcCsFyFQdMvxOcf7iWqTfqWTBYAJJTXHm/2J1wYIbVHhqnSqEyS1MO/OM18VxHcKGqoq4r6BEyfY7vBbZviGJnza5PfSGRe9Fvnr4VX+IhobWLGonUTwWMrn0RkFa59mT9Z4zVCvf/ceQLrBO5bLcO93IVXgFWWmzkGEImTfHAjChhls/WvXqGA/FEjdTyouAG0QZxbYDlbshCo/DltiH0ggXZnUokd+LWHzJl07yjiLbKE2/3DVqCuj4n69PEGJQePBhXoP/c=
   on:
     tags: true
-    repo: vpoulailleau/simplelogging
-    python: 3.7
+    python: 3.6
