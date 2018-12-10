@@ -96,14 +96,15 @@ def configure_main_logger(
         file_handler.setFormatter(file_formatter)
         logger.addHandler(file_handler)
 
+    def _reduced_logging():
+        logger.setLevel(WARNING)
 
-def reduced_logging(logger):
-    logger.setLevel(WARNING)
+    def _normal_logging():
+        logger.setLevel(INFO)
 
+    def _full_logging():
+        logger.setLevel(DEBUG)
 
-def normal_logging(logger):
-    logger.setLevel(INFO)
-
-
-def full_logging(logger):
-    logger.setLevel(DEBUG)
+    logger.reduced_logging = _reduced_logging
+    logger.normal_logging = _normal_logging
+    logger.full_logging = _full_logging

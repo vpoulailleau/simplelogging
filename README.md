@@ -79,8 +79,8 @@ def log_some_messages():
 #### main.py
 
 ```python
-import simplelogging
 import example_module
+import simplelogging
 
 # log = simplelogging.get_logger(console_level=simplelogging.DEBUG)
 # log = simplelogging.get_logger(file_name="log.txt")
@@ -99,14 +99,14 @@ log.error("---- example_module writes to the log ----")
 example_module.log_some_messages()
 
 log.error("---- reduced logging (bye debug and info messages) ----")
-simplelogging.reduced_logging(log)
+log.reduced_logging()
 log.debug("a debug message")
 log.info("an info")
 log.warning("a warning")
 log.error("an error")
 
 log.error("---- full logging (welcome back debug and info messages) ----")
-simplelogging.full_logging(log)
+log.full_logging()
 log.debug("a debug message")
 log.info("an info")
 log.warning("a warning")
