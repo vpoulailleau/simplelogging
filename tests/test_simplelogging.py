@@ -93,3 +93,12 @@ def test_default_logger_console_level():
                 break
     else:
         assert 0, "Not good console level"
+
+
+def test_default_logger_file():
+    """Test default logger level file handler presence"""
+    main_log = simplelogging.get_logger("__main__")
+    assert main_log.handlers
+    for handler in main_log.handlers:
+        if isinstance(handler, logging.handlers.RotatingFileHandler):
+            assert 0, "A file handler is found, but no file_name provided"
