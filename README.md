@@ -118,6 +118,15 @@ log.error("an error")
 
 More examples are provided in the documentation: https://simplelogging.readthedocs.io.
 
+## TODO
+
+* add badges (coverage…)
+* add tests
+* add type annotations
+* add docstring
+* test coverage measurement in CI
+* commit hooks
+
 ## Credits
 
 This package is an extension of the [logging](https://docs.python.org/3/howto/logging-cookbook.html) package in the Python standard library. Coloring of the console relies on [colorlog](https://github.com/borntyping/python-colorlog).
