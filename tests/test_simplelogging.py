@@ -1,12 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
 """Tests for `simplelogging` package."""
 
 import logging
 
 import colorlog
-import pytest
 
 import simplelogging
 
@@ -40,7 +36,7 @@ def test_default_logger_console():
         if isinstance(handler, colorlog.StreamHandler):
             break
     else:
-        assert 0, "No console handler found"
+        assert False, "No console handler found"
 
 
 def test_default_logger_console_formatter():
@@ -52,7 +48,7 @@ def test_default_logger_console_formatter():
             if isinstance(handler.formatter, colorlog.ColoredFormatter):
                 break
     else:
-        assert 0, "No good console formatter found"
+        assert False, "No good console formatter found"
 
 
 def test_default_logger_console_formatter_parameters():
@@ -80,7 +76,7 @@ def test_default_logger_console_formatter_parameters():
                 assert isinstance(formatter._style, logging._STYLES["%"][0])
                 break
     else:
-        assert 0, "No good console formatter found"
+        assert False, "No good console formatter found"
 
 
 def test_default_logger_console_level():
@@ -92,7 +88,7 @@ def test_default_logger_console_level():
             if handler.level == simplelogging.INFO:
                 break
     else:
-        assert 0, "Not good console level"
+        assert False, "Not good console level"
 
 
 def test_default_logger_file():
@@ -101,4 +97,4 @@ def test_default_logger_file():
     assert main_log.handlers
     for handler in main_log.handlers:
         if isinstance(handler, logging.handlers.RotatingFileHandler):
-            assert 0, "A file handler is found, but no file_name provided"
+            assert False, "A file handler is found, but no file_name provided"
