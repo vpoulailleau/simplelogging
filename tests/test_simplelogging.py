@@ -98,3 +98,31 @@ def test_default_logger_file():
     for handler in main_log.handlers:
         if isinstance(handler, logging.handlers.RotatingFileHandler):
             assert False, "A file handler is found, but no file_name provided"
+
+
+def test_default_imported_logger():
+    """Test default logger of imported module has no handlers"""
+    log = simplelogging.get_logger()
+    assert not log.handlers
+
+
+def test_disable_console():
+    """Test that console is disabled if console is False"""
+    main_log = simplelogging.get_logger("__main__", console=False)
+    for handler in main_log.handlers:
+        if isinstance(handler, colorlog.StreamHandler):
+            assert handler._name not in logging._handlers
+
+
+def test_console_format():
+    """Test that console is properly configured"""
+    format = "Vincent Poulailleau"
+    main_log = simplelogging.get_logger("__main__", console_format=format)
+    assert main_log.handlers
+    for handler in main_log.handlers:
+        if isinstance(handler, colorlog.StreamHandler):
+            if isinstance(handler.formatter, colorlog.ColoredFormatter):
+                if handler.formatter._fmt == format:
+                    break
+    else:
+        assert False, "no handler found with the good format"
