@@ -57,6 +57,8 @@ except ZeroDivisionError as error:
 
 ![quickstart result](quickstart.png)
 
+Keep in mind that you shouldn't do string formatting yourself. Delegate formatting to `simplelogging` (i.e. `logging` in this case), the formatting will be done only if necessary, that is if the message is going to be displayed. See above examples of how to display variables.
+
 ### Usage with modules
 
 #### example_module.py
