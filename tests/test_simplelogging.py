@@ -80,7 +80,7 @@ def test_default_logger_console_formatter_parameters():
 
 
 def test_default_logger_console_level():
-    """Test default logger level stream formatter presence"""
+    """Test default logger level stream formatter level"""
     main_log = simplelogging.get_logger("__main__")
     assert main_log.handlers
     for handler in main_log.handlers:
@@ -126,3 +126,17 @@ def test_console_format():
                     break
     else:
         assert False, "no handler found with the good format"
+
+
+def test_logger_console_level():
+    """Test logger level stream formatter level"""
+    main_log = simplelogging.get_logger(
+        "__main__", console_level=simplelogging.CRITICAL
+    )
+    assert main_log.handlers
+    for handler in main_log.handlers:
+        if isinstance(handler, colorlog.StreamHandler):
+            if handler.level == simplelogging.CRITICAL:
+                break
+    else:
+        assert False, "Not good console level"
