@@ -19,8 +19,8 @@ Logging made simple, no excuse for any print call.
 
 For advanced users:
 
- * The provided logger is one of those from `logging`, this means it can be configured so that log messages are sent by email, HTTP, as described in https://docs.python.org/3/library/logging.handlers.html.
- * The StreamHandler and the associated Formatter are those provided by `colorlog`.
+* The provided logger is one of those from `logging`, this means it can be configured so that log messages are sent by email, HTTP, or any of the options available in https://docs.python.org/3/library/logging.handlers.html.
+* The StreamHandler and the associated Formatter are those provided by `colorlog`.
 
 ## Example
 
