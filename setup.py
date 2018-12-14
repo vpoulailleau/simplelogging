@@ -24,7 +24,7 @@ setup(
     author="Vincent Poulailleau",
     author_email="vpoulailleau@gmail.com",
     classifiers=[
-        "Development Status :: 2 - Pre-Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Natural Language :: English",
@@ -33,8 +33,9 @@ setup(
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Topic :: Utilities",
     ],
-    description="Logging made simple, no excuse for any print call.",
+    description="Logging made simple, no excuse for any debug print call.",
     install_requires=requirements,
     license="BSD license",
     long_description=readme + "\n\n" + history,
@@ -47,6 +48,11 @@ setup(
     test_suite="tests",
     tests_require=test_requirements,
     url="https://github.com/vpoulailleau/simplelogging",
+    project_urls={
+        "Documentation": "https://simplelogging.readthedocs.io/en/latest/",
+        "Source": "https://github.com/vpoulailleau/simplelogging/",
+        "Tracker": "https://github.com/vpoulailleau/simplelogging/issues",
+    },
     version="0.8.0",
     zip_safe=False,
 )

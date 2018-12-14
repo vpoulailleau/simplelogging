@@ -4,7 +4,7 @@
 [![Travis](https://img.shields.io/travis/vpoulailleau/simplelogging.svg)](https://travis-ci.org/vpoulailleau/simplelogging)
 [![ReadTheDocs](https://readthedocs.org/projects/simplelogging/badge/?version=latest)](https://simplelogging.readthedocs.io/en/latest/?badge=latest)
 
-Logging made simple, no excuse for any print call.
+Logging made simple, no excuse for any debug print call.
 
 * Free software: BSD 3-Clause license
 * Documentation: https://simplelogging.readthedocs.io.
