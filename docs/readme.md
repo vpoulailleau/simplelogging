@@ -128,6 +128,7 @@ More examples are provided in the documentation: https://simplelogging.readthedo
 * add docstring
 * test coverage measurement in CI
 * commit hooks
+* describe pros/cons and alternatives
 
 ## Credits
 

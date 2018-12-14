@@ -146,11 +146,27 @@ log = simplelogging.get_logger(
 
 ### Configuring an existing logger
 
+The logger can be configured directly with `logging` API. The only helpers provided by `simplelogging` are:
+
+```python
+log = simplelogging.get_logger()
+
+log.reduced_logging()
+log.normal_logging()
+log.full_logging()
+```
+
+Those three methods configure respectively the logger level to:
+
+* `WARNING`
+* `INFO`
+* `DEBUG`
+
 ## Default configuration
 
 `simplelogging.get_logger()` is an easy way to configure a logging infrastructure. It accepts several parameters:
 
-* name: name of the logger (default: `None`)
+* name: name of the logger (default: `None`, `simplelogging` will call `logging.getLogger(__name__))` for imported modules)
 * logger_level: logging level (default: `DEBUG`)
 * console: activation of console output (default: `True`)
 * console_format: message format on console (default: `DEFAULT_CONSOLE_FORMAT`)
