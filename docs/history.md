@@ -1,5 +1,11 @@
 ## History
 
+### 0.9.0 (2018-12-14)
+
+* Improve documentation
+* Add tests
+* Change API for easy logging level change
+
 ### 0.8.0 (2018-12-09)
 
 * Improve documentation
