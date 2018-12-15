@@ -3,6 +3,9 @@
 [![PyPI](https://img.shields.io/pypi/v/simplelogging.svg)](https://pypi.python.org/pypi/simplelogging)
 [![Travis](https://img.shields.io/travis/vpoulailleau/simplelogging.svg)](https://travis-ci.org/vpoulailleau/simplelogging)
 [![ReadTheDocs](https://readthedocs.org/projects/simplelogging/badge/?version=latest)](https://simplelogging.readthedocs.io/en/latest/?badge=latest)
+[![Code style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
+[![License BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://github.com/vpoulailleau/simplelogging/blob/master/LICENSE)
+[![Downloads](https://pepy.tech/badge/simplelogging)](https://pepy.tech/project/simplelogging)
 
 Logging made simple, no excuse for any debug print call.
 
