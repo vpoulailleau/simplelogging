@@ -14,7 +14,7 @@ try:
 except FileNotFoundError:
     history = ""  # TODO remove, bug with tox?
 
-requirements = ["colorlog"]
+requirements = ["colorlog==4.0.2"]
 
 setup_requirements = ["pytest-runner"]
 
