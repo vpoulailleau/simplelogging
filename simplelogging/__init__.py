@@ -91,7 +91,7 @@ def configure_main_logger(
 
     if file_name:
         file_formatter = logging.Formatter(file_format)
-        file_handler = RotatingFileHandler(file_name, "a", 1024 * 1024, 3)
+        file_handler = RotatingFileHandler(file_name, "a", maxBytes=10 * 1024 * 1024, backupCount=10)
         file_handler.setLevel(file_level)
         file_handler.setFormatter(file_formatter)
         logger.addHandler(file_handler)
