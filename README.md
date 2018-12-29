@@ -126,11 +126,9 @@ More examples are provided in the documentation: https://simplelogging.readthedo
 
 ## TODO
 
-* add badges (coverage…)
 * add tests
 * add type annotations
 * add docstring
-* test coverage measurement in CI
 * commit hooks
 * describe pros/cons and alternatives
 
