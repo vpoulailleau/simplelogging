@@ -1,11 +1,12 @@
 # Simple Logging
 
 [![PyPI](https://img.shields.io/pypi/v/simplelogging.svg)](https://pypi.python.org/pypi/simplelogging)
+[![PyPI](https://img.shields.io/pypi/l/simplelogging.svg)](https://github.com/vpoulailleau/simplelogging/blob/master/LICENSE)
 [![Travis](https://img.shields.io/travis/vpoulailleau/simplelogging.svg)](https://travis-ci.org/vpoulailleau/simplelogging)
 [![ReadTheDocs](https://readthedocs.org/projects/simplelogging/badge/?version=latest)](https://simplelogging.readthedocs.io/en/latest/?badge=latest)
 [![Code style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
-[![License BSD](https://img.shields.io/badge/License-BSD-blue.svg)](https://github.com/vpoulailleau/simplelogging/blob/master/LICENSE)
 [![Downloads](https://pepy.tech/badge/simplelogging)](https://pepy.tech/project/simplelogging)
+[![Coverage Status](https://coveralls.io/repos/github/vpoulailleau/simplelogging/badge.svg?branch=master)](https://coveralls.io/github/vpoulailleau/simplelogging?branch=master)
 
 Logging made simple, no excuse for any debug print call.
 

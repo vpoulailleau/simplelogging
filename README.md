@@ -6,6 +6,7 @@
 [![ReadTheDocs](https://readthedocs.org/projects/simplelogging/badge/?version=latest)](https://simplelogging.readthedocs.io/en/latest/?badge=latest)
 [![Code style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Downloads](https://pepy.tech/badge/simplelogging)](https://pepy.tech/project/simplelogging)
+[![Coverage Status](https://coveralls.io/repos/github/vpoulailleau/simplelogging/badge.svg?branch=master)](https://coveralls.io/github/vpoulailleau/simplelogging?branch=master)
 
 Logging made simple, no excuse for any debug print call.
 
