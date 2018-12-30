@@ -7,6 +7,7 @@
 [![Code style: Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 [![Downloads](https://pepy.tech/badge/simplelogging)](https://pepy.tech/project/simplelogging)
 [![Coverage Status](https://coveralls.io/repos/github/vpoulailleau/simplelogging/badge.svg?branch=master)](https://coveralls.io/github/vpoulailleau/simplelogging?branch=master)
+[![Maintainability](https://api.codeclimate.com/v1/badges/4ad8f1bef2c011e8a5ac/maintainability)](https://codeclimate.com/github/vpoulailleau/simplelogging/maintainability)
 
 Logging made simple, no excuse for any debug print call.
 
