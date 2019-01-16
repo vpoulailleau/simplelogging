@@ -132,6 +132,7 @@ More examples are provided in the documentation: https://simplelogging.readthedo
 * add docstring
 * commit hooks
 * describe pros/cons and alternatives
+* release 1.0!
 
 ## Credits
 
