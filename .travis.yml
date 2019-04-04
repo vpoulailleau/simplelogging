@@ -2,14 +2,14 @@ env:
   global:
     - CC_TEST_REPORTER_ID=810f1d89cc17415a9d23357c8e123290516e177ae3f71f1b5b996c846d52d22d
 language: python
-matrix:
-  include:
-  - python: 3.4
-  - python: 3.5
-  - python: 3.7
-    dist: xenial
-    sudo: true
-  - python: 3.6
+python:
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.7-dev
+  - 3.8-dev
+  - nightly
+dist: xenial
 
 install: 
   - pip install -U tox-travis
