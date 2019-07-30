@@ -17,4 +17,4 @@ pytest-cov==2.7.1
 
 recommonmark==0.5.0
 
-coveralls[yaml]==1.8.1
+coveralls[yaml]==1.8.2
