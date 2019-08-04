@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import find_packages, setup
+import sys
 
 with open("README.md") as readme_file:
     readme = readme_file.read()
@@ -16,7 +17,17 @@ except FileNotFoundError:
 
 requirements = ["colorlog==4.0.2"]
 
-setup_requirements = ["pytest-runner"]
+# Check for 'pytest-runner' only if setup.py was invoked with 'test'.
+# This optimizes setup.py for cases when pytest-runner is not needed,
+# using the approach that is suggested upstream.
+#
+# See https://pypi.org/project/pytest-runner/#conditional-requirement
+needs_pytest = {"pytest", "test", "ptr"}.intersection(sys.argv)
+pytest_runner = ["pytest-runner"] if needs_pytest else []
+
+setup_requirements = [
+    # other setup requirements
+] + pytest_runner
 
 test_requirements = ["pytest"]
 
