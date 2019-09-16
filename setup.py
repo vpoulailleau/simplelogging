@@ -64,6 +64,6 @@ setup(
         "Source": "https://github.com/vpoulailleau/simplelogging/",
         "Tracker": "https://github.com/vpoulailleau/simplelogging/issues",
     },
-    version="0.9.0",
+    version="0.10.0",
     zip_safe=False,
 )
