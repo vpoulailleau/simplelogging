@@ -1,5 +1,10 @@
 ## History
 
+### 0.10.0 (2019-09-16)
+
+* setup.py: require pytest-runner only when necessary
+* remove Python 3.4 support
+
 ### 0.9.0 (2018-12-14)
 
 * Improve documentation
