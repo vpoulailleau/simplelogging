@@ -12,7 +12,7 @@ twine==1.15.0
 pylint==2.4.3
 
 pytest==5.2.2
-pytest-runner==5.1
+pytest-runner==5.2
 pytest-cov==2.8.1
 
 recommonmark==0.6.0
