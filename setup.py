@@ -16,7 +16,7 @@ try:
 except FileNotFoundError:
     history = ""  # TODO remove, bug with tox?
 
-requirements = ["colorlog==4.0.2"]
+requirements = ["colorlog==4.1.0"]
 
 # Check for 'pytest-runner' only if setup.py was invoked with 'test'.
 # This optimizes setup.py for cases when pytest-runner is not needed,
