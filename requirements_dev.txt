@@ -1,7 +1,7 @@
 -r requirements.txt
 
 pip==20.0.2
-bumpversion==0.5.3
+bumpversion==0.6.0
 wheel==0.34.2
 watchdog==0.10.2
 flake8==3.7.9
