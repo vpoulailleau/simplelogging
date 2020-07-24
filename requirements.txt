@@ -1,1 +1,1 @@
-colorlog==4.1.0
+colorlog==4.2.1
