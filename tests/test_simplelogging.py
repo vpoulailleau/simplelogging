@@ -116,7 +116,7 @@ def test_disable_console():
 
 def test_console_format():
     """Test that console is properly configured"""
-    format = "Vincent Poulailleau"
+    format = "Vincent Poulailleau %s"
     main_log = simplelogging.get_logger("__main__", console_format=format)
     assert main_log.handlers
     for handler in main_log.handlers:
