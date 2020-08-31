@@ -1,9 +1,4 @@
 """Top-level package for Simple Logging."""
-
-__author__ = """Vincent Poulailleau"""
-__email__ = "vpoulailleau@gmail.com"
-__version__ = "0.10.0"
-
 import inspect
 import logging
 from logging import CRITICAL, DEBUG, ERROR, INFO, WARNING
@@ -91,7 +86,9 @@ def configure_main_logger(
 
     if file_name:
         file_formatter = logging.Formatter(file_format)
-        file_handler = RotatingFileHandler(file_name, "a", maxBytes=10 * 1024 * 1024, backupCount=10)
+        file_handler = RotatingFileHandler(
+            file_name, "a", maxBytes=10 * 1024 * 1024, backupCount=10
+        )
         file_handler.setLevel(file_level)
         file_handler.setFormatter(file_formatter)
         logger.addHandler(file_handler)
