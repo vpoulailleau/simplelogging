@@ -138,4 +138,45 @@ More examples are provided in the documentation: https://simplelogging.readthedo
 
 This package is an extension of the [logging](https://docs.python.org/3/howto/logging-cookbook.html) package in the Python standard library. Coloring of the console relies on [colorlog](https://github.com/borntyping/python-colorlog).
 
-This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [audreyr/cookiecutter-pypackage](https://github.com/audreyr/cookiecutter-pypackage) project template.
+## Changelog
+
+### 0.11.0 (2020-08-31)
+
+* Use poetry
+
+### 0.10.0 (2019-09-16)
+
+* setup.py: require pytest-runner only when necessary
+* Remove Python 3.4 support
+
+### 0.9.0 (2018-12-14)
+
+* Improve documentation
+* Add tests
+* Change API for easy logging level change
+
+### 0.8.0 (2018-12-09)
+
+* Improve documentation
+* Change default format: enlarge level size for critical errors
+
+### 0.7.0 (2018-12-08)
+
+* Fix logging to file
+
+### 0.6.0 (2018-12-07)
+
+* Colored output on console
+* Improved documentation
+
+### 0.5.0 (2018-12-02)
+
+* Fix README rendering in PyPI
+
+### 0.4.0 (2018-12-02)
+
+* Fix bump config
+
+### 0.3.0 (2018-12-02)
+
+* First release on PyPI.
