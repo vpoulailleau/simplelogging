@@ -42,7 +42,7 @@ isolated_build = True
 envlist = py35, py36, py37, py38
 
 [testenv]
-allowlist_externals =
+whitelist_externals =
     poetry
     echo
     sed
