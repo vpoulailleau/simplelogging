@@ -47,13 +47,11 @@ allowlist_externals =
     echo
     sed
     cp
-    coveralls
 changedir = {toxinidir}/tests
 commands =
     poetry install -v
     poetry run pytest -s -vv --cov=simplelogging
     poetry run coverage xml
-    coveralls
     echo 'fix travis bug'
     sed --in-place -e 's#//home#/home#g' coverage.xml
     echo 'fix codeclimate bug, use relative path'
