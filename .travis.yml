@@ -18,7 +18,9 @@ matrix:
           sudo: true
 
 before_install:
-    - pip install poetry
+    - export POETRY_HOME=~/poetry
+    - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python3
+    - export PATH=~/poetry:$PATH
     - poetry --version
 
 install:
