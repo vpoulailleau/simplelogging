@@ -46,8 +46,10 @@ whitelist_externals =
     echo
     sed
     cp
+    pip
 changedir = {toxinidir}/tests
 commands =
+    pip install poetry
     poetry --version
     poetry show --tree
     poetry install -v
