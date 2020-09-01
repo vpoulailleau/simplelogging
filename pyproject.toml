@@ -48,7 +48,10 @@ whitelist_externals =
     cp
 changedir = {toxinidir}/tests
 commands =
+    poetry --version
+    poetry show --tree
     poetry install -v
+    poetry show --tree
     poetry run pytest -s -vv --cov=simplelogging
     poetry run coverage xml
     echo 'fix travis bug'
