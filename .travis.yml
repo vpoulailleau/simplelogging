@@ -17,6 +17,13 @@ matrix:
           dist: xenial
           sudo: true
 
+before_install:
+    - pip install poetry
+    - poetry --version
+
+install:
+    - poetry install -v
+
 before_script:
     - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
     - chmod +x ./cc-test-reporter
