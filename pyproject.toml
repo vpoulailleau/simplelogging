@@ -29,7 +29,6 @@ python = "^3.5"
 colorlog = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
-coveralls = {version = "=1.11.1", extras = ["yaml"]}
 pytest = "^6.0.0"
 pytest-cov = "^2.10.1"
 tox = "^3.19.0"
