@@ -140,6 +140,10 @@ This package is an extension of the [logging](https://docs.python.org/3/howto/lo
 
 ## Changelog
 
+### 0.12.0 (Not released yet)
+
+* Drop Python 2.5 support
+
 ### 0.11.0 (2020-08-31)
 
 * Use poetry

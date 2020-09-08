@@ -8,7 +8,6 @@ classifiers=[
     "License :: OSI Approved :: BSD License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.5",
     "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
@@ -25,20 +24,17 @@ license = "BSD-3-Clause"
 include = ["simplelogging/**/*.py"]
 
 [tool.poetry.dependencies]
-python = "^3.5"
+python = "^3.6"
 colorlog = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^6.0.0"
-pytest-cov = "^2.10.1"
-tox = "^3.19.0"
-tox-travis = "^0.12"
+python-dev-tools = {version = ">=2020.9.4", python = ">=3.7,<4.0"}
 
 [tool.tox]
 legacy_tox_ini = """
 [tox]
 isolated_build = True
-envlist = py35, py36, py37, py38
+envlist = py36, py37, py38
 
 [testenv]
 whitelist_externals =
