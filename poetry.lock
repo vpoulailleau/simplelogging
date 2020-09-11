@@ -802,7 +802,7 @@ marker = "python_version >= \"3.7\" and python_version < \"4.0\""
 name = "python-dev-tools"
 optional = false
 python-versions = ">=3.6.1,<4.0"
-version = "2020.9.7"
+version = "2020.9.10"
 
 [package.dependencies]
 Sphinx = ">=2.4.0,<3.0.0"
@@ -1566,8 +1566,8 @@ pytest-cov = [
     {file = "pytest_cov-2.10.1-py2.py3-none-any.whl", hash = "sha256:45ec2d5182f89a81fc3eb29e3d1ed3113b9e9a873bcddb2a71faaab066110191"},
 ]
 python-dev-tools = [
-    {file = "python_dev_tools-2020.9.7-py3-none-any.whl", hash = "sha256:95d25eb77c50c6ffd44f7244472de375035eb8e5ca7eff4eda90331d7b51ee23"},
-    {file = "python_dev_tools-2020.9.7.tar.gz", hash = "sha256:fcffe0376433496fbc13413cd55c20170288673b4b50299d58b61a1b0888838b"},
+    {file = "python_dev_tools-2020.9.10-py3-none-any.whl", hash = "sha256:91575d125aaced69ed42be475e7d75a422ebda112f2332d77ebeb94517eb1a89"},
+    {file = "python_dev_tools-2020.9.10.tar.gz", hash = "sha256:04a4b62edcf7f5a9be785758b3d3bfc01f0eaa8b03d45274a24e5c1650deeca4"},
 ]
 pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},
