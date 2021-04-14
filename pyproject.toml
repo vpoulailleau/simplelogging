@@ -25,7 +25,7 @@ include = ["simplelogging/**/*.py"]
 
 [tool.poetry.dependencies]
 python = "^3.6"
-colorlog = "^4.1.0"
+colorlog = ">=4.1,<6.0"
 
 [tool.poetry.dev-dependencies]
 python-dev-tools = {version = ">=2020.9.4", python = ">=3.7,<4.0"}
