@@ -1,17 +1,18 @@
 [tool.poetry]
 name = "simplelogging"
-version = "0.11.0"
+version = "0.12.0"
 description = "Logging made simple, no excuse for any debug print call."
-classifiers=[
+classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: BSD License",
     "Natural Language :: English",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.6",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Utilities",
 ]
 authors = ["Vincent Poulailleau <vpoulailleau@gmail.com>"]
@@ -24,17 +25,17 @@ license = "BSD-3-Clause"
 include = ["simplelogging/**/*.py"]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.8"
 colorlog = "^4.1.0"
 
 [tool.poetry.dev-dependencies]
-python-dev-tools = {version = ">=2020.9.4", python = ">=3.7,<4.0"}
+python-dev-tools = { version = ">=2020.9.4", python = ">=3.8,<4.0" }
 
 [tool.tox]
 legacy_tox_ini = """
 [tox]
 isolated_build = True
-envlist = py36, py37, py38
+envlist = py38, py39, py310, py311, py312
 
 [testenv]
 whitelist_externals =

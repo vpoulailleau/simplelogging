@@ -140,9 +140,10 @@ This package is an extension of the [logging](https://docs.python.org/3/howto/lo
 
 ## Changelog
 
-### 0.12.0 (Not released yet)
+### 0.12.0 (2023-07-02)
 
-* Drop Python 2.5 support
+* Drop Python 3.7 support
+* Switch to Poetry core as a build engine
 
 ### 0.11.0 (2020-08-31)
 
